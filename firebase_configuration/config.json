@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "smart-work-attendance-system",
+  "private_key_id": "faab38a64e491b660c467b0f2af967150ede6146",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqJkXedK7hOLtW\nPEB8Y2fIjH80hu/4sZW11C0XHOVxoUIYyteh5gu9Qsvuvf9Y6uGPqrP7wsWuFRfO\nY8CuBOQFwARZ9S31I/fimYoQJpQ6NIx6VrNYVfqnNQvuz/GYCrAdgn8+xHXVHZd5\nVb9j4ccfcVgE9MtF2uzLo5FOgryn1TzFBUu0XzuS/qkPUFTdFiNeK3geBP/Rdevf\nS5jpNVRN0Maw6NuddBNT74tXmgKbC8A69UxTP0d0hgOKHHnQfmncmaAhHe8wnVNe\n+upGBgJ0D7YYZkC4ck6pRAX/FuVC3fK2cEmdQ3yshcoVU5k7cZno9MKLz0tojLbj\np+V39m11AgMBAAECggEAIdbeynFWXoCT8YCmKpbyixY2LlIv47wd1D3QgepDT6gM\npzWgURiZeRiRyneLEzoThikjBo0kF40mYOvB5Fogp2wa8XErpLd0k2KJ7NBfZnwQ\n/DvGC2l+IkcQinxcxipKAHR1rhwQe0QZXg5JtCmxGnXGVaYBz3DM62sqePzTXGVe\nx7aLnlEPB2HQfotosVi51+PgzSUqFNF4dldH0/p7atkSMn6VUvc8jiy2DS+oBchq\nx+ZZwNSY3g9/iKZaaMJQxPBJuto/3fVN0286bDTiStqm+QWffDoML2pmYX1oxwuZ\nm+N3IaYvUS4b/P8LQLn2RQb7ExW6qVJ1IQs/eCwHQQKBgQDrF7AgfDtA05MULWbH\nIYEw+0W9+PyB/LONfA5kpn3hTMMtYRWNbltfXVFBNCyRIvEMb6xBT4Z5ed5eMF+Z\nd6o8319Kioz3ARYZFlLPhoBgRhL9eCS2oe5iVwp/XmOeVfQOyYVOsY19cPzSnQx3\nemaaK+/WqJ5mI0tJTt2DU4iY+QKBgQC5SAm4shj0Qe/2xA9bmB8oCIPm08yF9njO\n0OtMUNANMtpa0qhz0yp3wXv9+QxQj9x4ADcPCZFpKz1HTotwXy2hPShyrHJa0YDy\nYitPCx0sVtJg9IsQq62DuV4P4XrxC9w/JeURXjskwlyYMIdkYXJAYHxgKRjSHp6Y\nhq5TdldzXQKBgHiv1G8Y16JT+zFkjVq0zInEtOztoVNp0xNTGGB7SCwdKCVnrZTJ\njobKdSgwDKEFexGTUq7EkJhUA9/+nVU/pVlSoqy1q+Ax4pJGb4Sx272Qu7b7sn0/\nbA13+Z+haSqjnYLp2VGovKYlFuVYUkoTwBBtddaRAaAVhlS/89+zRnChAoGBAKwe\nSLGj+NyHmHTDg4TSFzdoWagH3zofUfDGUZ9ufyeTsxamFUirxQrE2ft/7Tm1uthb\nUsqMV+G8AkwIoi48rLXZi4ajvgOyFbiVC6h9KZez+/GHmtxcr27rt37HNx9PpkWf\nXWG6CPVH/R6ADnZos+sr9r6Zzu369de5XZ45FFodAoGBAIPqzjuUaYwkK1jUVxDA\nvi48oYyc8ldnKCDZ3rEdbQSOSbazAIwjHhJJ9cSwHHqDoxgf+Ij0B39KvGy+A1pa\nBvIxZoM0Lt+vZT/ECJi9E+Ea75jiskxcU7EEZ+m1shjNiMRWbisIdb47fUI7BixE\njmpxZtY5SjwWuqaBPF5YnCLv\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-iw2vv@smart-work-attendance-system.iam.gserviceaccount.com",
+  "client_id": "105063811826785418296",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-iw2vv%40smart-work-attendance-system.iam.gserviceaccount.com"
+}

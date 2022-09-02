@@ -2,7 +2,9 @@ import cv2
 from flask import Flask, render_template, Response
 import time
 from camera import VideoCamera
-from imagehadle import saveImage
+from get_photo_of_employers import get_photo_of_employers
+from facedetection import facedetection
+from uplodetofirebae import uplodetofirebae
 import os
 from PIL import Image
 import numpy as np
@@ -14,7 +16,7 @@ video_camera = VideoCamera()
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.get('/')
 def index():
     return render_template('index.html')
 
@@ -29,12 +31,21 @@ def video_feed():
     return Response(gen(video_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.post('/save')
+@app.post('/save') # Get poto and save this in the file
 def save_image():
     frame = video_camera.get_frame()
     image = np.array(Image.open(io.BytesIO(frame)))
-    SaveImage = saveImage(image,"1")
-    SaveImage.save_image_of_file() 
+    get_poto = get_photo_of_employers(image) 
+    get_poto.save_image_in_the_file() 
+    return render_template('index.html')
+
+@app.post('/submit')
+def submit():
+    face_detection = facedetection() #Go to the file and all image crop to face
+    face_detection.cropallfasce()
+    firebace = uplodetofirebae("1") #Uplode to firebace
+    firebace.uplodePoto()
+    face_detection.deleteallfile() #Delete all file
     return render_template('index.html')
 
 if __name__ == '__main__':
