@@ -1,5 +1,5 @@
 import cv2
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, request
 import time
 from camera import VideoCamera
 from get_photo_of_employers import get_photo_of_employers
@@ -43,10 +43,17 @@ def save_image():
 def submit():
     face_detection = facedetection() #Go to the file and all image crop to face
     face_detection.cropallfasce()
-    firebace = uplodetofirebae("1") #Uplode to firebace
-    firebace.uplodePoto()
-    face_detection.deleteallfile() #Delete all file
-    return render_template('index.html')
+    countofimage = face_detection.counfile()
+    form_detail = request.form
+    if countofimage > 5:
+        firebace = uplodetofirebae(str(form_detail.get("work_id")), form_detail) #Uplode to firebace
+        firebace.uplodePoto()
+        firebace.uplodeData()
+        face_detection.deleteallfile() #Delete all file
+        return render_template('index.html', massage = "Sucsses full upadate")
+    else:
+        face_detection.deleteallfile()
+        return render_template('index.html',  massage = "We can't find morethan 5 faces")
 
 if __name__ == '__main__':
     os.system("start \"\" http://127.0.0.1:5000")

@@ -1,11 +1,12 @@
-from firebase_admin import credentials, initialize_app, storage
+from firebase_admin import credentials, initialize_app, storage, firestore
 import os
 
 class uplodetofirebae:
-    def __init__(self, workid, folderName = 'photo_of_employers', localpath=".\\static\\photo_of_new_employer"):
+    def __init__(self, workid, form_detail, folderName = 'photo_of_employers', localpath=".\\static\\photo_of_new_employer"):
         self.workid = workid
         self.folderName = folderName
         self.localpath = localpath
+        self.form_detail = form_detail
         self.cred = credentials.Certificate(".\\firebase_configuration\\config.json")
         try:
             initialize_app(self.cred, {'storageBucket': 'smart-work-attendance-system.appspot.com'})
@@ -28,4 +29,17 @@ class uplodetofirebae:
             path_local, path_firebase = path
             blob = bucket.blob(path_firebase)
             blob.upload_from_filename(path_local)
+    def uplodeData(self):
+        user_detail = self.form_detail
+        work_id, full_name, national_id, date_of_birth = user_detail.get("work_id"), user_detail.get("full_name"), user_detail.get("national_id"), user_detail.get("date_of_birth")
+        db = firestore.client()
+        doc_ref = db.collection('Employer_data').document(self.workid)
+        doc_ref.set({
+            'work_id':'{}'.format(work_id),
+            'full_name':'{}'.format(full_name),
+            'national_id':'{}'.format(national_id),
+            'date_of_birth': date_of_birth
+        })
+
+
 

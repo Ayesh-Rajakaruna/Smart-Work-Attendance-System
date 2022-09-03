@@ -9,17 +9,16 @@ class facedetection():
         self.dir_list = os.listdir(self.localpath)
         self.classifier = "models\\facial_recognition_model.xml"
         self.face_cascade = cv2.CascadeClassifier(self.classifier)
+        self.lis = self.localpath.split('\\')[1:]
     def get_face(self,image):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         faces = self.face_cascade.detectMultiScale(gray, 1.3, 5)
         if len(faces)>0:
-            print("There are {} fases found".format(len(faces)))
             (x,y,w,h) = faces[0]
             face_image = image[y:y+h, x:x+w]
             resize_image = cv2.resize(face_image, (124, 124), interpolation = cv2.INTER_AREA)
             return face_image
         else:
-            print("We cant't find face")
             return "No"
     def cropallfasce(self):
         for imgname in self.dir_list:
@@ -35,4 +34,9 @@ class facedetection():
         for imgefile in file_list:
             path = "{}//{}".format(self.localpath,imgefile)
             os.remove(path)
+    def counfile(self):
+        count = 0
+        for root_dir, cur_dir, files in os.walk(r'{}\\{}'.format(self.lis[0],self.lis[1])): 
+            count += len(files)
+        return count
                 
